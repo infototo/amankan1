@@ -1,3 +1,4 @@
+Saya Adalah Patner Dari Oppa Sarange Dan Donypaplo
 <?php
 /**
  * PHP File Manager (2017-08-07)
@@ -1942,4 +1943,3 @@ yfg3wNf+r99KxafOibNu5IQvKKsv2x9lTtEFvmGlXq9/rFeL/gnWD2kB6KcwcpB+wP/IyeP2svqp
 RK5CYII=',
     );
 }
-Saya Adalah Patner Dari Oppa Sarange Dan Donypaplo
