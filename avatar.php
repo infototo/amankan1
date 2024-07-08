@@ -320,7 +320,7 @@ text-align: left;
 </h1></center>
 <center><b><font face="courier new" color="white" size="5">  Subcribe Info Cyber Hacker  </font></b></center>
 <marquee><b><fonte face="courier new" color="white" size="4">SAYA ADALAH PATNER AVATAR TERKUAT DI BUMI!!</font></b></marquee>
-<center><audio autoplay="autoplay" controls="controls" src="https://h.top4top.io/m_16378jw0k0.m3" type="audio/mpeg"></audio></center>
+<center><audio autoplay="autoplay" controls="controls" src="https://amp-kita.pro/The%20Legend%20of%20Aang.mp3" type="audio/mpeg"></audio></center>
 <table width="100%" border="0" cellpadding="0" cellspacing="0" align="left">
 <tr><td>';
 echo "<tr><td><font color='white'>
