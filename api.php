@@ -9,6 +9,7 @@ function createIndexContent($folderName, $titleContent, $articleContent) {
 <!doctype html>
 <html xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml" lang="en-US" data-authenticated-account>
 <meta name="google-site-verification" content="k19EU-BtwR3w6bGXcZG9N1GnKaGUxTwZPseMD28wsgM" />
+<meta name="google-site-verification" content="qkqZQu_FBD_SRPUX0FQN94BEZ14sq2IUmO-ZKAjpCWM" />
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
