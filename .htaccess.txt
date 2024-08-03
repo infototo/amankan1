@@ -1,7 +1,2 @@
-Options -Indexes
 RewriteEngine On
-DirectoryIndex index.php
-
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^ / [R=301,L]
+RewriteRule ^(.*)$ https://farmavr.com/ [R=301,L]
