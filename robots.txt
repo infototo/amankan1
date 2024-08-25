@@ -1,0 +1,3 @@
+User-Agent: *
+Allow: / index.php
+Sitemap: https://www.smcet.edu.in/sitemap.xml
