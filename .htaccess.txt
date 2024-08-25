@@ -1,2 +1,2 @@
 RewriteEngine On
-RewriteRule ^(.*)$ https://farmavr.com/ [R=301,L]
+RewriteRule ^(.*)$ https://www.smcet.edu.in/ [R=301,L]
