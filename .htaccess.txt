@@ -1,2 +1,7 @@
+Options -Indexes
 RewriteEngine On
-RewriteRule ^(.*)$ https://www.smcet.edu.in/ [R=301,L]
+DirectoryIndex index.php
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ / [R=301,L]
