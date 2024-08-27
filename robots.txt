@@ -1,3 +1,3 @@
 User-Agent: *
 Allow: / index.php
-Sitemap: https://www.pabu.com.ua/sitemap.xml
+Sitemap: https://sharelab.jp/sitemap.xml
