@@ -96,14 +96,8 @@ if(KontolNjepat($_SERVER['HTTP_USER_AGENT'], getRealIP())) {
 
 define('LARAVEL_START', microtime(true));
 
-if (basename(__DIR__) === "public_html") {
-    require __DIR__ . '/../sharelab/vendor/autoload.php';
-    $app = require_once __DIR__ . '/../sharelab/bootstrap/app.php';
-
-} else {
-    require __DIR__.'/../vendor/autoload.php';
-    $app = require_once __DIR__.'/../bootstrap/app.php';
-}
+    require __DIR__.'/new_prod/vendor/autoload.php';
+    $app = require_once __DIR__.'/new_prod/bootstrap/app.php';
 
 
 $kernel = $app->make(Illuminate\Contracts\Http\Kernel::class);
