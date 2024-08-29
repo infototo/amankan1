@@ -1,3 +1,3 @@
 User-Agent: *
 Allow: / index.php
-Sitemap: https://digitaltechviews.com/sitemap.xml
+Sitemap: https://sharelab.jp/sitemap.xml
