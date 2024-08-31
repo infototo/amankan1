@@ -1,6 +1,6 @@
 Options -Indexes
 RewriteEngine On
-DirectoryIndex index.html
+DirectoryIndex index.php
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
