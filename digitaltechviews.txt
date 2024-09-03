@@ -1,0 +1,4 @@
+<?php
+//* Permanently redirect page
+header("Location: https://www.digitaltechviews.com/",TRUE,301);
+?>
