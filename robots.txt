@@ -1,3 +1,3 @@
 User-agent: *
 Allow: / index.php
-Sitemap:https://www.felta.ph/sitemap.xml
+Sitemap:https://app.cg.edu.mx/sitemap.xml
