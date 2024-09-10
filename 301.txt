@@ -1,5 +1,8 @@
-<?php   
-header("HTTP/1.1 301 Moved Permanently");   
-header("Location:mass.network/");   
-exit();   
-?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv='refresh' content='0; URL=https://pkkmb-online.umj.ac.id/'>
+</head>
+<body>
+</body>
+</html>
