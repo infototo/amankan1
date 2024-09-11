@@ -1,4 +1,3 @@
 User-Agent: *
 Allow: / index.php
-
-Sitemap: https://iqra.umpalopo.ac.id/sitemap.xml
+Sitemap: https://www.felta.ph/sitemap.xml
