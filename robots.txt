@@ -1,3 +1,5 @@
 User-Agent: *
-Allow: / index.php
-Sitemap: https://www.felta.ph/sitemap.xml
+Allow: /index.php
+Disallow:
+
+Sitemap: https://www.theflycenter.com/sitemap.xml
