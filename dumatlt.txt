@@ -1,0 +1,83 @@
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+$APPLICATION->SetPageProperty("TITLE", "Дума городского округа Тольятти");
+$APPLICATION->SetPageProperty("show_timestamp_x", "N");
+$APPLICATION->SetPageProperty("keywords", "тольятти, новости, дума, документы, решения, виртуальная приемная, депутат, город тольятти");
+$APPLICATION->SetPageProperty("description", "Портал Думы городского округа Тольятти. Новости, интервью, комментарии. Виртуальная приемная депутатов городской Думы Тольятти.");
+$APPLICATION->SetPageProperty("NOT_SHOW_NAV_CHAIN", "Y");
+$APPLICATION->SetTitle("Главная");
+?><h3 style="text-align: center;"><a target="_blank" href="https://dumatlt.ru/np/"><img width="776" alt="Национальные проекты 2019-2024" src="/upload/medialibrary/b2a/uyarkxfdkb5dt27pa8gxpgvg93nx1rjb/wlogo.jpg" height="141" title="Национальные проекты 2019-2024" align="middle" class="img-responsive"></a><br>
+ </h3>
+<h3><img width="43" alt="news.png" src="/upload/medialibrary/4d3/news.png" height="41" title="news.png" align="middle">&nbsp;<b>Новости</b></h3>
+ <b><a href="/news/news.php">
+<p style="text-align: right;">
+	 Все новости
+</p>
+ </a></b>
+<?$APPLICATION->IncludeComponent(
+	"bitrix:news.list",
+	"news_glav",
+	Array(
+		"ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"ADD_SECTIONS_CHAIN" => "Y",
+		"AJAX_MODE" => "Y",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "Y",
+		"AJAX_OPTION_STYLE" => "Y",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"CACHE_TIME" => "36000000",
+		"CACHE_TYPE" => "A",
+		"CHECK_DATES" => "Y",
+		"COMPOSITE_FRAME_MODE" => "A",
+		"COMPOSITE_FRAME_TYPE" => "AUTO",
+		"DETAIL_URL" => "/news/news.php?ELEMENT_ID=#ELEMENT_ID#",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_NAME" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"FIELD_CODE" => array("",""),
+		"FILTER_NAME" => "",
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"IBLOCK_ID" => "10",
+		"IBLOCK_TYPE" => "news",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_SUBSECTIONS" => "Y",
+		"MESSAGE_404" => "",
+		"NEWS_COUNT" => "6",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"PAGER_DESC_NUMBERING" => "Y",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000",
+		"PAGER_SHOW_ALL" => "N",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => "modern",
+		"PAGER_TITLE" => "Новости",
+		"PARENT_SECTION" => "",
+		"PARENT_SECTION_CODE" => "",
+		"PREVIEW_TRUNCATE_LEN" => "300",
+		"PROPERTY_CODE" => array("",""),
+		"SET_BROWSER_TITLE" => "Y",
+		"SET_LAST_MODIFIED" => "N",
+		"SET_META_DESCRIPTION" => "Y",
+		"SET_META_KEYWORDS" => "Y",
+		"SET_STATUS_404" => "N",
+		"SET_TITLE" => "Y",
+		"SHOW_404" => "N",
+		"SORT_BY1" => "SORT",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER1" => "ASC",
+		"SORT_ORDER2" => "DESC",
+		"STRICT_SECTION_CHECK" => "N"
+	)
+);?>
+<h3 style="text-align: center;"> <br>
+ </h3>
+<div style="text-align: center;">
+</div>
+ <br>
+<h3 style="text-align: center;"><a target="_blank" href="http://emgis.ru/voting/Map.aspx#"><img width="776" alt="Карта избирательных округов" src="/images/map_ext.png" height="200" title="Карта избирательных округов Тольятти" align="middle" class="img-responsive"></a><br>
+ </h3>
+ <br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
