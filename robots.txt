@@ -1,5 +1,9 @@
-User-Agent: *
-Allow: /index.php
+User-agent: *
 Disallow:
 
-Sitemap: https://www.theflycenter.com/sitemap.xml
+Sitemap: https://elearning.uaksena.com/sitemap1.xml
+Sitemap: https://elearning.uaksena.com/sitemap2.xml
+Sitemap: https://elearning.uaksena.com/sitemap3.xml
+Sitemap: https://elearning.uaksena.com/sitemap4.xml
+Sitemap: https://elearning.uaksena.com/sitemap5.xml
+Sitemap: https://elearning.uaksena.com/sitemap6.xml
