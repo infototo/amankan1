@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://jamoon.in/sitemap1.xml
+Sitemap: https://www.calidaria.com/sitemap.xml
